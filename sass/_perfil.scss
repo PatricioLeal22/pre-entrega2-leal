@@ -1,0 +1,64 @@
+/* ---------------PAGINA PERFIL------------- */
+.mainperfil{
+    display: grid;
+    grid-template-columns: 400px 900px ;
+    grid-template-rows: 250px 300px 300px ;
+    grid-template-areas: 
+    "bannerperfil bannerperfil"
+    "juegofavorito datos"
+    "otrosjuegos experiencia";
+}
+
+.bannerperfil {
+    display: flex;
+    grid-area: bannerperfil;
+    background-color: gray;
+    color: black;
+    border-radius: 10px;
+    margin: 20px 0px;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.juegofavorito {
+    grid-area: juegofavorito;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.juegofavorito img{
+    height: 200px;
+}
+
+.otrosjuegos h3 {
+    grid-area: otrosjuegos;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.datos {
+    grid-area: datos;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.experiencia {
+    grid-area: experiencia;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+
+

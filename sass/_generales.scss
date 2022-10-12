@@ -1,0 +1,167 @@
+/*---------COLORES GENERALES----------*/
+$color-hud: #17202A;
+$color-hover: #121416;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0%;
+    background-color: #121416;
+    font-family: sans-serif;
+    position: relative;
+    padding-bottom: 4em;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    max-height: 110px;
+    background-color: $color-hud;
+}
+
+.logo {
+    color: white;
+    padding: 10px 0px 10px 30px;
+}
+
+.logo h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+
+
+/* -------------MENU-------------- */
+.toggle-menu {
+    position: absolute;
+    width: 40px;
+    top: 1.2rem;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    z-index: 1;
+}
+
+.main-menu {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1C2833;
+    transition: transform 0.2s;
+    transform: translateY(-130%);
+}
+
+.main-menu--show {
+    transform: translateY(0);
+}
+
+.toggle-menu__checkbox:checked + .main-menu {
+    transform: translateY(0);
+}
+
+.toggle-menu__checkbox {
+    display: none;
+}
+
+.main-menu__item {
+    padding: 1em 6.7em;
+}
+
+.main-menu__link {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main-menu__item:hover {
+    background-color: $color-hover;
+}
+
+
+
+/* --------FOOTER-------- */
+
+footer {
+    background-color: $color-hud;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.iconfooter a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+footer h6 {
+    color: white;
+    font-size: 12px;
+}
+
+
+/* ---------FIRTS MOBILE MENU---------- */
+
+@media (min-width: 500px) {
+    .main-menu {
+        position: relative;
+        top: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $color-hud;
+    }
+    .toggle-menu {
+        display: none;
+    }
+
+    .main-menu__item {
+        padding: 5px 15px;
+        gap: 5px;
+    }
+
+
+    .main-menu__item:hover {
+        transition: 0.4s;
+        background-color: $color-hover;
+        color: white;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-menu {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-hud;
+    }
+    .toggle-menu {
+        display: none;
+    }
+
+    .main-menu__item {
+        padding: 5px 30px;
+        gap: 10px;
+    }
+
+
+    .main-menu__item:hover {
+        transition: 0.4s;
+        background-color: $color-hover;
+        color: white;
+    }
+}
